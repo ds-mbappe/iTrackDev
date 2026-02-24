@@ -1,0 +1,28 @@
+modules:
+  jira:issuePanel:
+    - key: itrackdev-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: iTrackDev
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs24.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/bc4ac4c3-6499-471f-850e-c40495a350d9
+permissions:
+  scopes:
+    - storage:app
+    - read:user:jira
+    - write:jira-work
+    - write:attachment:jira
+    - read:attachment:jira
