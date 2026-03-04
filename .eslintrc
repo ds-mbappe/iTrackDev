@@ -7,16 +7,9 @@
     }
   },
   "plugins": [
-    "react-hooks",
-    "formatjs"
+    "react-hooks"
   ],
   "rules": {
-    "react-hooks/rules-of-hooks": "error",
-    "formatjs/enforce-id": [
-      "error",
-      {
-        "idInterpolationPattern": "[sha512:contenthash:base64:6]"
-      }
-    ]
+    "react-hooks/rules-of-hooks": "error"
   }
 }
