@@ -165,7 +165,7 @@ export default function InlineEditor({ draft, setDraft }) {
           key={`attachment-picker-${pickerKey}`}
           label="Upload media"
           description="Select local image/video files to attach."
-          onChange={queueSelectedFiles}
+          onChange={() => {}}
         />
 
         {selectionError ? (
