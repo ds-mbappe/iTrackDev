@@ -161,12 +161,12 @@ export default function InlineEditor({ draft, setDraft }) {
         <Text color="color.text.subtle">
           Selected files are queued and will upload when you click Save.
         </Text>
-        <FilePicker
+        {/* <FilePicker
           key={`attachment-picker-${pickerKey}`}
           label="Upload media"
           description="Select local image/video files to attach."
-          onChange={() => {}}
-        />
+          onChange={queueSelectedFiles}
+        /> */}
 
         {selectionError ? (
           <SectionMessage title="Attachment error" appearance="error">
